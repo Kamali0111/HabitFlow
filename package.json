@@ -1,0 +1,25 @@
+{
+  "name": "habitflow-monorepo",
+  "version": "1.0.0",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "build": "cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.5.0",
+    "axios": "^1.15.2",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "jwt-decode": "^4.0.0",
+    "lucide-react": "^1.11.0",
+    "postcss": "^8.5.10",
+    "react-router-dom": "^6.30.3",
+    "recharts": "^3.8.1",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

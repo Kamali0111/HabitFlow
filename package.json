@@ -4,7 +4,7 @@
   "scripts": {
     "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
     "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm install && npm run build"
   },
   "dependencies": {
     "autoprefixer": "^10.5.0",

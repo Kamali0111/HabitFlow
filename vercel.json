@@ -23,6 +23,10 @@
       "dest": "/frontend/assets/$1"
     },
     {
+      "src": "/images/(.*)",
+      "dest": "/frontend/images/$1"
+    },
+    {
       "src": "/vite.svg",
       "dest": "/frontend/vite.svg"
     },

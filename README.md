@@ -2,14 +2,14 @@
 
 HabitFlow is a production-ready, full-stack SaaS application built to help users build consistency and track their life transformations through smart, AI-driven insights.
 
-## 🚀 Tech Stack
+## Tech Stack
 - **Frontend**: React (Vite), Tailwind CSS, Recharts, Lucide React
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB (Mongoose)
 - **Authentication**: JWT (JSON Web Tokens) with HttpOnly concepts
 - **Architecture**: Strict MVC (Models, Views, Controllers)
 
-## ✨ Features
+## Features
 - **Modern SaaS UI**: Glassmorphism design with smooth animations and dark mode toggle.
 - **Habit Tracking**: CRUD operations for habits with streak calculation and "Streak Freeze" capability.
 - **AI Insights**: Locally computed smart suggestions based on the last 30 days of habit data.
@@ -17,7 +17,7 @@ HabitFlow is a production-ready, full-stack SaaS application built to help users
 - **Authentication**: Secure JWT-based registration and login system.
 - **Seed Data**: Pre-populated with test data for immediate exploration.
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 - Node.js installed
@@ -59,7 +59,7 @@ NODE_ENV=development
 ```
 *Note: Port 5001 is used to avoid conflicts with macOS AirPlay (port 5000).*
 
-## 🧠 AI Engine Logic
+## AI Engine Logic
 The AI Insights engine analyzes:
 - **Consistency Score**: Overall completion rate.
 - **Best Day Detection**: Identifies which day of the week you are most productive.
@@ -67,7 +67,7 @@ The AI Insights engine analyzes:
 - **Momentum Trends**: Compares current week performance with the previous week.
 - **Overload Detection**: Warns if you have too many habits with low completion.
 
-## 📸 API Documentation
+## API Documentation
 - `POST /api/auth/register`: Create a new account
 - `POST /api/auth/login`: Authenticate and get token
 - `GET /api/habits`: Fetch all habits
@@ -77,7 +77,7 @@ The AI Insights engine analyzes:
 
 ---
 
-## ☁️ Vercel Deployment
+## Vercel Deployment
 
 The project is pre-configured for Vercel deployment using the included `vercel.json`.
 
@@ -89,4 +89,4 @@ The project is pre-configured for Vercel deployment using the included `vercel.j
    ```
 3. **Environment Variables**: Add `MONGODB_URI`, `JWT_SECRET`, and `NODE_ENV=production` in the Vercel dashboard.
 
-Built with ❤️ by HabitFlow Team.
+Built with love by HabitFlow Team.

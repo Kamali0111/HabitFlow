@@ -23,32 +23,41 @@ HabitFlow is a production-ready, full-stack SaaS application built to help users
 - Node.js installed
 - MongoDB running locally (default: `mongodb://127.0.0.1:27017/habitflow`)
 
-### 1. Backend Setup
+### 1. Quick Setup (Monorepo)
+From the root directory, you can install all dependencies and run both servers simultaneously:
+```bash
+npm run install-all
+npm run dev
+```
+
+### 2. Manual Setup
+**Backend:**
 ```bash
 cd backend
 npm install
-node seed.js  # This will seed the database with demo user Alex Johnson
+node seed.js  # Seeds database with demo user
+npm run dev   # Runs on port 5001
+```
+
+**Frontend:**
+```bash
+cd frontend
+npm install
 npm run dev
 ```
 **Credentials for Seed User:**
 - **Email**: `alex@demo.com`
 - **Password**: `demo1234`
 
-### 2. Frontend Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
 ### 3. Environment Variables
 Create a `.env` file in the `backend` directory:
 ```env
-PORT=5000
+PORT=5001
 MONGODB_URI=mongodb://127.0.0.1:27017/habitflow
-JWT_SECRET=supersecretkey12345
+JWT_SECRET=your_secret_key
 NODE_ENV=development
 ```
+*Note: Port 5001 is used to avoid conflicts with macOS AirPlay (port 5000).*
 
 ## 🧠 AI Engine Logic
 The AI Insights engine analyzes:
@@ -67,4 +76,17 @@ The AI Insights engine analyzes:
 - `GET /api/ai/suggestions`: Get AI-calculated insights
 
 ---
+
+## ☁️ Vercel Deployment
+
+The project is pre-configured for Vercel deployment using the included `vercel.json`.
+
+1. **Prerequisites**: A [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cluster (local MongoDB will not work in production).
+2. **Deploy**:
+   ```bash
+   npm install -g vercel
+   vercel
+   ```
+3. **Environment Variables**: Add `MONGODB_URI`, `JWT_SECRET`, and `NODE_ENV=production` in the Vercel dashboard.
+
 Built with ❤️ by HabitFlow Team.

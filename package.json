@@ -1,4 +1,11 @@
 {
+  "name": "habitflow-monorepo",
+  "version": "1.0.0",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "build": "cd frontend && npm run build"
+  },
   "dependencies": {
     "autoprefixer": "^10.5.0",
     "axios": "^1.15.2",
@@ -11,5 +18,9 @@
     "recharts": "^3.8.1",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
+
